@@ -8,6 +8,8 @@ import datetime
 
 #Total time working: 5hrs (mostly trying to figure out how to get a token)
 
+# Research help: Google, Stack Overflow, Wikipedia, Python.org
+
 receiveList =[]                     # List of the data extracted from each URL
 info = {'token':'4U8eApHj2v'}       # My token in dictitonary form
 url = 'http://challenge.code2040.org/api/getstring' 
