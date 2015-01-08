@@ -12,7 +12,7 @@ import datetime
 
 receiveList =[]                     # List of the data extracted from each URL
 info = {'token':'4U8eApHj2v'}       # My token in dictitonary form
-url = 'http://challenge.code2040.org/api/getstring' 
+
 myURLs = ['http://challenge.code2040.org/api/getstring',
           'http://challenge.code2040.org/api/haystack',
           'http://challenge.code2040.org/api/prefix',
@@ -21,7 +21,7 @@ myURLs = ['http://challenge.code2040.org/api/getstring',
 
 for i in range(4):
     request = Request(myURLs[i], data=dumps(info))                  # Python info request
-    receiveList.append(loads(urlopen(request).read())['result'])    # Places the dictionaries into this list, which will be accessed later
+    receiveList.append(loads(urlopen(request).read())['result'])    # Places the dictionaries into this list, which will be accessed later; Major help from StackOverflow and Python.org
     
 ################################################# >>> Challenges
 
@@ -73,7 +73,7 @@ def dates():
                              int(datestamp[11:13]), # hours
                              int(datestamp[14:16]), # minutes
                              int(datestamp[17:19]), # seconds
-                             int(datestamp[20:23])) # UTC offset
+                             int(datestamp[20:23])) # UTC offset; major help from StackOverflow
     finalTime = time + datetime.timedelta(seconds=interval)
     return finalTime.isoformat()
     
